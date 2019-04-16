@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">AndroidStudy</string>
+    <string name="title_activity_toast">ToastActivity</string>
+    <string name="email">wrx1379@163.com</string>
+    <array name="city">
+        <item>北京</item>
+        <item>上海</item>
+        <item>广州</item>
+        <item>天津</item>
+        <item>大连</item>
+        <item>郑州</item>
+    </array>
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.wuruixuan.androidstudy.ImageViewActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="31dp"
+            app:srcCompat="@drawable/img2"
+            android:maxHeight="200dp"
+            android:maxWidth="200dp"
+            android:adjustViewBounds="true"/>
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/imageView1"
+            android:layout_marginTop="97dp"
+            app:srcCompat="@drawable/img2"
+            android:scaleType="fitCenter"/>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

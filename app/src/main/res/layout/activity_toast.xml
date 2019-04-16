@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.wuruixuan.androidstudy.ToastActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="Toast显示文本"
+            android:onClick="viewText"/>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/button1"
+            android:layout_below="@+id/button1"
+            android:layout_marginTop="14dp"
+            android:onClick="viewImage"
+            android:text="Toast显示图片" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="21dp"
+            android:text="Toast显示图文"
+            android:onClick="viewImageText"/>
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

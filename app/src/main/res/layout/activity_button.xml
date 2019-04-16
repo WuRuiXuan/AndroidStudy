@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.wuruixuan.androidstudy.ButtonActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/button2"
+            android:layout_marginTop="19dp"
+            android:onClick="click1"
+            android:padding="16dp"
+            android:text="按钮的常用属性"
+            android:textColor="@color/red"
+            android:textSize="15sp"
+            tools:layout_editor_absoluteX="42dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:text="使用onClick属性"
+            tools:layout_editor_absoluteX="42dp"
+            tools:layout_editor_absoluteY="84dp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/button2"
+            android:layout_below="@+id/button2"
+            android:layout_marginTop="25dp"
+            android:text="使用View.OnClickListener"
+            tools:layout_editor_absoluteX="42dp"
+            tools:layout_editor_absoluteY="150dp" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/button3"
+            android:layout_below="@+id/button3"
+            android:layout_marginTop="25dp"
+            android:text="使用内部类的方式来注册事件"
+            tools:layout_editor_absoluteX="42dp"
+            tools:layout_editor_absoluteY="220dp" />
+
+        <Button
+            android:id="@+id/button5"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="158dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:text="确定"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="447dp" />
+
+        <Button
+            android:id="@+id/button6"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="158dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:text="注册"
+            tools:layout_editor_absoluteX="210dp"
+            tools:layout_editor_absoluteY="447dp" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button4"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="75dp"
+            android:background="@drawable/button_bg"
+            android:text="按钮的背景"
+            android:textColor="#fff"
+            tools:layout_editor_absoluteX="148dp"
+            tools:layout_editor_absoluteY="338dp" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/button5"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="18dp"
+            android:layout_marginEnd="12dp"
+            app:srcCompat="@mipmap/ic_launcher" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.wuruixuan.androidstudy.ToggleButtonActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ToggleButton
+            android:id="@+id/toggleButton1"
+            android:layout_width="163dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="45dp"
+            android:text="开关按钮"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="26dp"
+            android:textOn="开"
+            android:textOff="关"/>
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/toggleButton1"
+            android:layout_below="@+id/toggleButton1"
+            android:layout_marginTop="47dp"
+            android:text="Switch"
+            android:textOn="确定"
+            android:textOff="取消"/>
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
