@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <array name="city">
+        <item>北京</item>
+        <item>上海</item>
+        <item>广州</item>
+        <item>天津</item>
+        <item>大连</item>
+        <item>郑州</item>
+    </array>
     <array name="city_name">
         <item>beijing</item>
         <item>tianjin</item>
