@@ -19,6 +19,7 @@ android {
     lintOptions {
         disable 'GoogleAppIndexingWarning'
     }
+    useLibrary 'org.apache.http.legacy'
 }
 
 dependencies {

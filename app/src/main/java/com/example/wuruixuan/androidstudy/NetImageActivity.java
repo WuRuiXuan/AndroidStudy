@@ -1,6 +1,5 @@
 package com.example.wuruixuan.androidstudy;
 
-import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Handler;
@@ -27,7 +26,7 @@ public class NetImageActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_url_image);
+        setContentView(R.layout.activity_net_image);
         iv = findViewById(R.id.imageView);
     }
 
