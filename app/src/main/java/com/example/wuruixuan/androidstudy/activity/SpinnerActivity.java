@@ -1,9 +1,11 @@
-package com.example.wuruixuan.androidstudy;
+package com.example.wuruixuan.androidstudy.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+
+import com.example.wuruixuan.androidstudy.R;
 
 public class SpinnerActivity extends AppCompatActivity {
 

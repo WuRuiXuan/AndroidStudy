@@ -1,9 +1,11 @@
-package com.example.wuruixuan.androidstudy;
+package com.example.wuruixuan.androidstudy.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.RatingBar;
 import android.widget.Toast;
+
+import com.example.wuruixuan.androidstudy.R;
 
 public class RatingBarActivity extends AppCompatActivity {
 

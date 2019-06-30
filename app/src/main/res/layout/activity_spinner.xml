@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.wuruixuan.androidstudy.SpinnerActivity">
+    tools:context="com.example.wuruixuan.androidstudy.activity.SpinnerActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"

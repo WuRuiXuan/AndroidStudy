@@ -1,10 +1,12 @@
-package com.example.wuruixuan.androidstudy;
+package com.example.wuruixuan.androidstudy.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
+
+import com.example.wuruixuan.androidstudy.R;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;

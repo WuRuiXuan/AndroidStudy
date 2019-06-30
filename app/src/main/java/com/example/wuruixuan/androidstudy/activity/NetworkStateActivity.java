@@ -1,4 +1,4 @@
-package com.example.wuruixuan.androidstudy;
+package com.example.wuruixuan.androidstudy.activity;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+
+import com.example.wuruixuan.androidstudy.R;
 
 public class NetworkStateActivity extends AppCompatActivity {
 

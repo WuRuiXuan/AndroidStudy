@@ -1,4 +1,4 @@
-package com.example.wuruixuan.androidstudy;
+package com.example.wuruixuan.androidstudy.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -11,6 +11,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.wuruixuan.androidstudy.R;
 
 public class ToastActivity extends AppCompatActivity {
 

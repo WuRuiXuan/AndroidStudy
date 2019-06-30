@@ -1,4 +1,4 @@
-package com.example.wuruixuan.androidstudy;
+package com.example.wuruixuan.androidstudy.activity;
 
 import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+
+import com.example.wuruixuan.androidstudy.R;
 
 public class AlertDialogActivity extends AppCompatActivity {
 

@@ -1,10 +1,12 @@
-package com.example.wuruixuan.androidstudy;
+package com.example.wuruixuan.androidstudy.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.Toast;
+
+import com.example.wuruixuan.androidstudy.R;
 
 public class CheckBoxActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
 
