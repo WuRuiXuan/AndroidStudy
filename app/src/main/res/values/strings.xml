@@ -2,4 +2,7 @@
     <string name="app_name">AndroidStudy</string>
     <string name="title_activity_toast">ToastActivity</string>
     <string name="email">wrx1379@163.com</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
