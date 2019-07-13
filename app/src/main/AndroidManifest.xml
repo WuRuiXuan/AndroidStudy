@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.FragmentActivity3">
+        <activity android:name=".activity.UIDatePickerActivity"></activity>
+        <activity android:name=".activity.UITimeAndDatePickerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
