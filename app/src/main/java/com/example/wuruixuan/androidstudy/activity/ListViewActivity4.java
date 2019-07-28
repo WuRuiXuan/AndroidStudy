@@ -23,20 +23,24 @@ public class ListViewActivity4 extends AppCompatActivity {
         lv = findViewById(R.id.listView);
 
         // 准备数据，每一个HashMap是一条记录
-        HashMap<String, String> title1 = new HashMap<>();
+        HashMap<String, Object> title1 = new HashMap<>();
         title1.put("title", "title-1");
-        HashMap<String, String> title2 = new HashMap<>();
+        title1.put("icon", R.drawable.img1);
+        HashMap<String, Object> title2 = new HashMap<>();
         title2.put("title", "title-2");
-        HashMap<String, String> title3 = new HashMap<>();
+        title2.put("icon", R.drawable.img2);
+        HashMap<String, Object> title3 = new HashMap<>();
         title3.put("title", "title-3");
+        title3.put("icon", R.drawable.img3);
 
-        ArrayList<Map<String, String>> list = new ArrayList<>();
+        ArrayList<Map<String, Object>> list = new ArrayList<>();
         list.add(title1);
         list.add(title2);
         list.add(title3);
 
         // 把数据填充到Adapter
-        SimpleAdapter adapter = new SimpleAdapter(this, list, R.layout.list_item4, new String[]{"title"}, new int[]{R.id.textView_title});
+        SimpleAdapter adapter = new SimpleAdapter(this, list, R.layout.list_item4, new String[]{"title", "icon"},
+                new int[]{R.id.textView_title, R.id.imageView_icon});
         lv.setAdapter(adapter);
     }
 }
