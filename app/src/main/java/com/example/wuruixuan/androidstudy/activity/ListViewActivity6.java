@@ -1,5 +1,7 @@
 package com.example.wuruixuan.androidstudy.activity;
 
+import android.os.Handler;
+import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,16 +20,20 @@ public class ListViewActivity6 extends AppCompatActivity implements AbsListView.
     private ListView lv;
     private int index;
     private static Vector<News> news = new Vector<>();
-    private MyAdapter adapter;
+    private MyAdapter myAdapter;
+    private MyHandler handler; // 线程之间通讯的机制
+    private final static int DATA_UPDATE = 0x1; // 数据更新完成后的标记
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_view6);
         lv = findViewById(R.id.listView);
+        lv.setOnScrollListener(this);
         initData();
-        adapter = new MyAdapter();
-        lv.setAdapter(adapter);
+        myAdapter = new MyAdapter();
+        lv.setAdapter(myAdapter);
+        handler = new MyHandler(myAdapter);
         View loadingView = getLayoutInflater().inflate(R.layout.loading, null);
         lv.addFooterView(loadingView);
     }
@@ -45,16 +51,17 @@ public class ListViewActivity6 extends AppCompatActivity implements AbsListView.
         }
     }
 
+    private int visibleLastIndex; // 用来可显示的最后一条数据的索引
     @Override
     public void onScrollStateChanged(AbsListView view, int scrollState) {
-        if (scrollState == AbsListView.OnScrollListener.SCROLL_STATE_IDLE) {
-
+        if (myAdapter.getCount() == visibleLastIndex && scrollState == AbsListView.OnScrollListener.SCROLL_STATE_IDLE) {
+            new LoadDataThread().start();
         }
     }
 
     @Override
     public void onScroll(AbsListView absListView, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
-
+        visibleLastIndex = firstVisibleItem + visibleItemCount - 1;
     }
 
     static class News {
@@ -104,6 +111,24 @@ public class ListViewActivity6 extends AppCompatActivity implements AbsListView.
         TextView tv_content;
     }
 
+    static class MyHandler extends Handler {
+        private MyAdapter adapter;
+
+        private MyHandler(MyAdapter myAdapter) {
+            super();
+            this.adapter = myAdapter;
+        }
+
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what) {
+                case DATA_UPDATE:
+                    adapter.notifyDataSetChanged();
+                    break;
+            }
+        }
+    }
+
     class LoadDataThread extends Thread {
         @Override
         public void run() {
@@ -113,6 +138,9 @@ public class ListViewActivity6 extends AppCompatActivity implements AbsListView.
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+//            adapter.notifyDataSetChanged();
+            // 通过handler给主线程发送一个消息标记
+            handler.sendEmptyMessage(DATA_UPDATE);
         }
     }
 }
