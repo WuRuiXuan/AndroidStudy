@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import com.example.wuruixuan.androidstudy.R;
 
-public class UITimeAndDatePickerActivity extends AppCompatActivity {
+public class TimePickerAndDatePickerActivity extends AppCompatActivity {
 
     private TimePicker tp;
     private DatePicker dp;
