@@ -241,6 +241,24 @@
                 android:textAllCaps="false"
                 android:textSize="18sp"/>
 
+            <Button
+                android:id="@+id/btn_textSwitcher"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="TextSwitcher"
+                android:textAllCaps="false"
+                android:textSize="18sp"/>
+
+            <Button
+                android:id="@+id/btn_viewFlipper"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="ViewFlipper"
+                android:textAllCaps="false"
+                android:textSize="18sp"/>
+
         </GridLayout>
 
     </ScrollView>

@@ -95,6 +95,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_imageSwitcher:
                 switchActivity(ImageSwitcherActivity.class);
                 break;
+            case R.id.btn_textSwitcher:
+                switchActivity(TextSwitcherActivity.class);
+            case R.id.btn_viewFlipper:
+                switchActivity(ViewFlipperActivity.class);
+                break;
         }
     }
 
@@ -124,6 +129,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button btn_listView6 = findViewById(R.id.btn_listView6);
         Button btn_expandableListView = findViewById(R.id.btn_expandableListView);
         Button btn_imageSwitcher = findViewById(R.id.btn_imageSwitcher);
+        Button btn_textSwitcher = findViewById(R.id.btn_textSwitcher);
+        Button btn_viewFlipper = findViewById(R.id.btn_viewFlipper);
 
         btn_toast.setOnClickListener(this);
         btn_textView.setOnClickListener(this);
@@ -150,6 +157,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_listView6.setOnClickListener(this);
         btn_expandableListView.setOnClickListener(this);
         btn_imageSwitcher.setOnClickListener(this);
+        btn_textSwitcher.setOnClickListener(this);
+        btn_viewFlipper.setOnClickListener(this);
     }
 
     private void switchActivity(Class activityClass) {

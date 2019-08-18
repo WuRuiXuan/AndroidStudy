@@ -51,8 +51,8 @@ public class ImageSwitcherActivity extends AppCompatActivity implements ViewSwit
                 is.setOutAnimation(this, android.R.anim.fade_out);
             } else if (endX - startX > 20) { // 上一张
                 index = index - 1 < 0 ? images.length - 1 : --index;
-                is.setInAnimation(this, android.R.anim.fade_out);
-                is.setOutAnimation(this, android.R.anim.fade_in);
+                is.setInAnimation(this, android.R.anim.fade_in);
+                is.setOutAnimation(this, android.R.anim.fade_out);
             }
             is.setImageResource(images[index]);
 
