@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- always一直显示 -->
+    <!-- ifRoom有空间就显示 -->
+    <!-- never隐藏 -->
+
+    <item
+        android:id="@+id/game_settings"
+        android:title="游戏设置"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:icon="@android:drawable/ic_menu_set_as"/>
+
+    <item
+        android:id="@+id/game_start"
+        android:title="开始游戏"
+        android:orderInCategory="200"
+        app:showAsAction="ifRoom"
+        android:icon="@android:drawable/ic_media_play"/>
+
+    <item
+        android:id="@+id/game_exit"
+        android:title="退出游戏"
+        android:orderInCategory="300"
+        app:showAsAction="never"
+        android:icon="@android:drawable/ic_delete"/>
+
+</menu>
