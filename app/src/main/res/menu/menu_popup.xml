@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/size_s"
+        android:title="S"
+        android:orderInCategory="100"/>
+
+    <item
+        android:id="@+id/size_m"
+        android:title="M"
+        android:orderInCategory="200"/>
+
+    <item
+        android:id="@+id/size_l"
+        android:title="L"
+        android:orderInCategory="300"/>
+
+    <!-- 多级菜单 -->
+    <!--<item>-->
+        <!--<menu>-->
+            <!--<item></item>-->
+        <!--</menu>-->
+    <!--</item>-->
+
+    <!-- 分组，每组同一id -->
+    <!--<group></group>-->
+
+</menu>

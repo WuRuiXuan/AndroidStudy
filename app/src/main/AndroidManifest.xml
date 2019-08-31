@@ -12,6 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".activity.PopupMenuActivity" />
+        <activity android:name=".activity.ContextMenuActivity" />
         <activity android:name=".activity.OptionsMenuActivity" />
         <activity android:name=".activity.ViewFlipperActivity" />
         <activity android:name=".activity.TextSwitcherActivity" />
