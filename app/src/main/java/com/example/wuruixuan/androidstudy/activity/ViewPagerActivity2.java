@@ -1,34 +1,33 @@
 package com.example.wuruixuan.androidstudy.activity;
 
-import android.graphics.Color;
+import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.wuruixuan.androidstudy.R;
 
 import java.util.ArrayList;
 
-public class ViewPagerActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener {
+public class ViewPagerActivity2 extends AppCompatActivity implements ViewPager.OnPageChangeListener {
 
     private ViewPager vp;
-    private PagerTabStrip pts;
-    private String[] titles = {"第一幅画", "第二幅画", "第三幅画", "第四幅画"};
     private ArrayList<View> views = new ArrayList<>();
+    private ImageView[] imageViews;
+    private int currentIndex;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_pager);
-
+        setContentView(R.layout.activity_view_pager2);
         vp = findViewById(R.id.viewPager);
-        pts = findViewById(R.id.pagerTabStrip);
         initViews();
+        initPoints();
         vp.setAdapter(new MyPagerAdapter());
         vp.setOnPageChangeListener(this);
     }
@@ -38,10 +37,24 @@ public class ViewPagerActivity extends AppCompatActivity implements ViewPager.On
         views.add(getLayoutInflater().inflate(R.layout.pager_layout2, null));
         views.add(getLayoutInflater().inflate(R.layout.pager_layout3, null));
         views.add(getLayoutInflater().inflate(R.layout.pager_layout4, null));
+    }
 
-        pts.setBackgroundColor(getResources().getColor(android.R.color.holo_blue_light));
-        pts.setTabIndicatorColor(getResources().getColor(android.R.color.holo_blue_bright));
-        pts.setTextColor(Color.WHITE);
+    private void initPoints() {
+        LinearLayout pointsLayout = findViewById(R.id.points_layout);
+        imageViews = new ImageView[views.size()];
+        for (int i = 0; i < imageViews.length; i ++) {
+            imageViews[i] = (ImageView) pointsLayout.getChildAt(i);
+        }
+        currentIndex = 0;
+        imageViews[currentIndex].setImageResource(R.drawable.touched_holo);
+    }
+
+    private void setCurrentPoint(int position) {
+        if (currentIndex < 0 || currentIndex == position || currentIndex > imageViews.length - 1) {
+            return;
+        }
+        imageViews[currentIndex].setImageResource(R.drawable.default_holo);
+        imageViews[position].setImageResource(R.drawable.touched_holo);
     }
 
     @Override
@@ -51,7 +64,8 @@ public class ViewPagerActivity extends AppCompatActivity implements ViewPager.On
 
     @Override
     public void onPageSelected(int position) {
-        Toast.makeText(this, "page---" + position, Toast.LENGTH_SHORT).show();
+        setCurrentPoint(position);
+        currentIndex = position;
     }
 
     @Override
@@ -83,11 +97,6 @@ public class ViewPagerActivity extends AppCompatActivity implements ViewPager.On
         public void destroyItem(ViewGroup container, int position, Object object) {
             View v = views.get(position);
             container.removeView(v);
-        }
-
-        @Override
-        public CharSequence getPageTitle(int position) {
-            return titles[position];
         }
     }
 }

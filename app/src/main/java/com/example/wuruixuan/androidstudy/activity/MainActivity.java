@@ -107,6 +107,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 switchActivity(PopupMenuActivity.class);
             case R.id.btn_viewPager:
                 switchActivity(ViewPagerActivity.class);
+            case R.id.btn_viewPager2:
+                switchActivity(ViewPagerActivity2.class);
                 break;
         }
     }
@@ -143,6 +145,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button btn_contextMenu = findViewById(R.id.btn_contextMenu);
         Button btn_popupMenu = findViewById(R.id.btn_popupMenu);
         Button btn_viewPager = findViewById(R.id.btn_viewPager);
+        Button btn_viewPager2 = findViewById(R.id.btn_viewPager2);
 
         btn_toast.setOnClickListener(this);
         btn_textView.setOnClickListener(this);
@@ -175,6 +178,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_contextMenu.setOnClickListener(this);
         btn_popupMenu.setOnClickListener(this);
         btn_viewPager.setOnClickListener(this);
+        btn_viewPager2.setOnClickListener(this);
     }
 
     private void switchActivity(Class activityClass) {
