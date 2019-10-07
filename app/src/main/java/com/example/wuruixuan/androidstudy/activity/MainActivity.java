@@ -20,6 +20,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.btn_linearLayout:
+                switchActivity(LinearLayoutActivity.class);
+                break;
+            case R.id.btn_relativeLayout:
+                switchActivity(RelativeLayoutActivity.class);
+                break;
+            case R.id.btn_tableLayout:
+                switchActivity(TableLayoutActivity.class);
+                break;
+            case R.id.btn_frameLayout:
+                switchActivity(FrameLayoutActivity.class);
+                break;
+            case R.id.btn_gridLayout:
+                switchActivity(GridLayoutActivity.class);
+                break;
             case R.id.btn_toast:
                 switchActivity(ToastActivity.class);
                 break;
@@ -118,6 +133,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void setListeners() {
+        Button btn_linearLayout = findViewById(R.id.btn_linearLayout);
+        Button btn_relativeLayout = findViewById(R.id.btn_relativeLayout);
+        Button btn_tableLayout = findViewById(R.id.btn_tableLayout);
+        Button btn_frameLayout = findViewById(R.id.btn_frameLayout);
+        Button btn_gridLayout = findViewById(R.id.btn_gridLayout);
         Button btn_toast = findViewById(R.id.btn_toast);
         Button btn_textView = findViewById(R.id.btn_textView);
         Button btn_editText = findViewById(R.id.btn_editText);
@@ -153,6 +173,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button btn_popupWindow = findViewById(R.id.btn_popupWindow);
         Button btn_notifications = findViewById(R.id.btn_notifications);
 
+        btn_linearLayout.setOnClickListener(this);
+        btn_relativeLayout.setOnClickListener(this);
+        btn_tableLayout.setOnClickListener(this);
+        btn_frameLayout.setOnClickListener(this);
+        btn_gridLayout.setOnClickListener(this);
         btn_toast.setOnClickListener(this);
         btn_textView.setOnClickListener(this);
         btn_editText.setOnClickListener(this);

@@ -19,7 +19,7 @@ public class TextViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_text_view);
 
         textView1 = (TextView)findViewById(R.id.textView1);
-        textView1.setText("codingke.com");
+        textView1.setText("google.com");
 
         autoCompleteTextView1 = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextView1);
         ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.city_name, android.R.layout.simple_dropdown_item_1line);

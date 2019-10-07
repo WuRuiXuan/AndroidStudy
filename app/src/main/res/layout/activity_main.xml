@@ -17,6 +17,51 @@
             android:columnCount="2">
 
             <Button
+                android:id="@+id/btn_linearLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="LinearLayout"
+                android:textAllCaps="false"
+                android:textSize="18sp"/>
+
+            <Button
+                android:id="@+id/btn_relativeLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="RelativeLayout"
+                android:textAllCaps="false"
+                android:textSize="18sp"/>
+
+            <Button
+                android:id="@+id/btn_tableLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="TableLayout"
+                android:textAllCaps="false"
+                android:textSize="18sp"/>
+
+            <Button
+                android:id="@+id/btn_frameLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="FrameLayout"
+                android:textAllCaps="false"
+                android:textSize="18sp"/>
+
+            <Button
+                android:id="@+id/btn_gridLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="GridLayout"
+                android:textAllCaps="false"
+                android:textSize="18sp"/>
+
+            <Button
                 android:id="@+id/btn_toast"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
