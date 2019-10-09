@@ -15,6 +15,8 @@ import com.example.wuruixuan.androidstudy.R;
 public class NotificationsActivity extends AppCompatActivity {
 
     public static final int N_ID_1 = 0x1;
+    public static final int N_ID_2 = 0x2;
+    public static final int N_ID_3 = 0x3;
     private static final String message = "新年快乐！万事如意！";
 
     @Override
@@ -57,6 +59,52 @@ public class NotificationsActivity extends AppCompatActivity {
     }
 
     public void sendBigViewNotification(View v) {
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
+        builder.setSmallIcon(R.mipmap.ic_launcher);
+        builder.setContentTitle("消息");
+        builder.setContentText("消息");
+        builder.setNumber(5);
+        // 设置大视图样式
+        NotificationCompat.InboxStyle style = new NotificationCompat.InboxStyle();
+        style.setBigContentTitle("吟诗作赋");
+        style.addLine("两个黄鸟鸣羽木");
+        style.addLine("一行白鸟上月天");
+        style.setSummaryText("作者：豆腐");
+        builder.setStyle(style);
 
+        Notification n = builder.build();
+        NotificationManager nm = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        nm.notify(N_ID_2, n);
+    }
+
+    public void sendProgressBarNotification(View v) {
+        final NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
+        builder.setSmallIcon(R.mipmap.ic_launcher);
+        builder.setContentTitle("更新中...");
+        builder.setContentText("正在由装逼模式更新至牛逼模式");
+        // 第三个参数 true - 不确定进度
+        builder.setProgress(100, 5, false);
+
+        final NotificationManager nm = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        nm.notify(N_ID_3, builder.build());
+
+        // 模拟更新的线程
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                for (int progress = 0; progress < 100; progress+=5) {
+                    builder.setProgress(100, progress, false);
+                    nm.notify(N_ID_3, builder.build());
+                    try {
+                        Thread.sleep(500);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                builder.setProgress(0, 0, false);
+                builder.setContentText("更新完成，由于机主逼格不够，正在返回逗逼模式");
+                nm.notify(N_ID_3, builder.build());
+            }
+        }).start();
     }
 }

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.NotificationsActivity">
+    tools:context=".activity.NotificationsActivity"
+    android:gravity="center">
 
     <Button
         android:id="@+id/btn_normal_notification"
@@ -25,5 +26,15 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:onClick="sendBigViewNotification"/>
+
+    <Button
+        android:id="@+id/btn_progress_bar_notification"
+        android:text="发送一个带进度条的通知"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_big_view_notification"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="sendProgressBarNotification"/>
 
 </RelativeLayout>
