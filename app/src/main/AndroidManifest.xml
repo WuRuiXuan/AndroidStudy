@@ -12,6 +12,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".activity.RelativeLayoutActivity" />
+        <activity android:name=".activity.LinearLayoutActivity" />
+        <activity android:name=".activity.GridLayoutActivity" />
+        <activity android:name=".activity.FrameLayoutActivity" />
+        <activity android:name=".activity.TableLayoutActivity" />
+        <activity android:name=".activity.NotificationClickActivity" />
+        <activity android:name=".activity.NotificationsActivity" />
+        <activity android:name=".activity.PopupWindowActivity" />
         <activity
             android:name=".activity.ViewPagerActivity2"
             android:theme="@style/AppTheme.NoActionBar" />
