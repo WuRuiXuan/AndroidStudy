@@ -9,6 +9,7 @@ import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.RemoteViews;
 
 import com.example.wuruixuan.androidstudy.R;
 
@@ -17,6 +18,8 @@ public class NotificationsActivity extends AppCompatActivity {
     public static final int N_ID_1 = 0x1;
     public static final int N_ID_2 = 0x2;
     public static final int N_ID_3 = 0x3;
+    public static final int N_ID_4 = 0x4;
+
     private static final String message = "新年快乐！万事如意！";
 
     @Override
@@ -106,5 +109,16 @@ public class NotificationsActivity extends AppCompatActivity {
                 nm.notify(N_ID_3, builder.build());
             }
         }).start();
+    }
+
+    public void sendCustomViewNotification(View v) {
+        final NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
+        // 创建一个远程的视图
+        RemoteViews views = new RemoteViews(getPackageName(), R.layout.notification_custom_layout);
+        builder.setContent(views);
+        builder.setTicker("云音乐");
+        builder.setSmallIcon(android.R.drawable.ic_dialog_email);
+        final NotificationManager nm = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        nm.notify(N_ID_4, builder.build());
     }
 }

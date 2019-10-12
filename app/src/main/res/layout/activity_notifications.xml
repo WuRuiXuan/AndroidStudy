@@ -37,4 +37,14 @@
         android:layout_alignParentEnd="true"
         android:onClick="sendProgressBarNotification"/>
 
+    <Button
+        android:id="@+id/btn_custom_view_notification"
+        android:text="发送一个自定义视图的通知"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_progress_bar_notification"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="sendCustomViewNotification"/>
+
 </RelativeLayout>
