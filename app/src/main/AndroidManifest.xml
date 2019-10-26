@@ -12,6 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".activity.StyleAndThemeActivity" android:theme="@style/MyAppTheme"/>
         <activity android:name=".activity.RelativeLayoutActivity" />
         <activity android:name=".activity.LinearLayoutActivity" />
         <activity android:name=".activity.GridLayoutActivity" />
