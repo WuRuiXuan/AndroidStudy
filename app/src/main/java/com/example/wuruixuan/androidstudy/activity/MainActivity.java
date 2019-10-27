@@ -130,6 +130,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 switchActivity(NotificationsActivity.class);
             case R.id.btn_style_and_theme:
                 switchActivity(StyleAndThemeActivity.class);
+            case R.id.btn_custom_view:
+                switchActivity(CustomViewActivity.class);
                 break;
         }
     }
@@ -175,6 +177,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button btn_popupWindow = findViewById(R.id.btn_popupWindow);
         Button btn_notifications = findViewById(R.id.btn_notifications);
         Button btn_style_and_theme = findViewById(R.id.btn_style_and_theme);
+        Button btn_custom_view = findViewById(R.id.btn_custom_view);
 
         btn_linearLayout.setOnClickListener(this);
         btn_relativeLayout.setOnClickListener(this);
@@ -216,6 +219,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_popupWindow.setOnClickListener(this);
         btn_notifications.setOnClickListener(this);
         btn_style_and_theme.setOnClickListener(this);
+        btn_custom_view.setOnClickListener(this);
     }
 
     private void switchActivity(Class activityClass) {
