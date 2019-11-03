@@ -20,4 +20,5 @@
         <item>老曹</item>
         <item>亮亮</item>
     </string-array>
+    <string name="title_activity_activity">ActivityActivity</string>
 </resources>

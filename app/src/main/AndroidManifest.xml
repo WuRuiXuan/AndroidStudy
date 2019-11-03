@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.CustomViewActivity"></activity>
+        <activity android:name=".activity.ActivityActivity"></activity>
+        <activity android:name=".activity.CustomViewActivity" />
         <activity
             android:name=".activity.StyleAndThemeActivity"
             android:theme="@style/MyAppTheme" />
