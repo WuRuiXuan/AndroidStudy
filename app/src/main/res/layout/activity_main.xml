@@ -385,6 +385,15 @@
                 android:textAllCaps="false"
                 android:textSize="18sp"/>
 
+            <Button
+                android:id="@+id/btn_activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="Activity"
+                android:textAllCaps="false"
+                android:textSize="18sp"/>
+
         </GridLayout>
 
     </ScrollView>

@@ -1,7 +1,10 @@
 package com.example.wuruixuan.androidstudy.activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
 
 import com.example.wuruixuan.androidstudy.R;
 
@@ -9,7 +12,9 @@ import com.example.wuruixuan.androidstudy.R;
  * Activity的三个状态和七大生命周期
  */
 
-public class ActivityActivity extends AppCompatActivity {
+public class ActivityA extends AppCompatActivity {
+
+    private EditText et_info;
 
     /**
      * Activity创建时第一个调用的方法，通常我们在该方法中加载布局文件，初始化UI组件，事件注册等等
@@ -18,8 +23,10 @@ public class ActivityActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_activity);
+        setContentView(R.layout.activity_a);
         System.out.println("Activity-onCreate");
+
+        et_info = findViewById(R.id.editText_info);
     }
 
     /**
@@ -81,5 +88,19 @@ public class ActivityActivity extends AppCompatActivity {
         System.out.println("Activity-onDestroy");
     }
 
-
+    /**
+     * 启动ActivityB，并传递数据
+     */
+    public void sendClick(View view) {
+        Intent intent = new Intent(this, ActivityB.class);
+        String info = et_info.getText().toString();
+        // 封装要传递的数据
+//        Bundle data = new Bundle();
+//        data.putString("info", info);
+//        intent.putExtra("data", data);
+        // 不封装直接传递
+        intent.putExtra("info", info);
+        intent.putExtra("age", 20);
+        startActivity(intent);
+    }
 }
