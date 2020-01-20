@@ -14,11 +14,35 @@
         android:hint="请输入信息"/>
 
     <Button
-        android:id="@+id/button_send"
+        android:id="@+id/button_send1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/editText_info"
-        android:text="发送"
-        android:onClick="sendClick"/>
+        android:text="发送一"
+        android:onClick="sendClick1"/>
+
+    <Button
+        android:id="@+id/button_send2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_send1"
+        android:text="发送二"
+        android:onClick="sendClick2"/>
+
+    <Button
+        android:id="@+id/button_sendObj1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_send2"
+        android:text="传递对象一"
+        android:onClick="sendObjClick1"/>
+
+    <Button
+        android:id="@+id/button_sendObj2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_sendObj1"
+        android:text="传递对象二"
+        android:onClick="sendObjClick2"/>
 
 </RelativeLayout>

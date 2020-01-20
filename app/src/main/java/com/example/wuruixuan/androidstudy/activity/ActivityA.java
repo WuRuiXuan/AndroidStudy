@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.example.wuruixuan.androidstudy.R;
+import com.example.wuruixuan.androidstudy.activity.classes.Cat;
+import com.example.wuruixuan.androidstudy.activity.classes.Dog;
 
 /**
  * Activity的三个状态和七大生命周期
@@ -91,16 +93,44 @@ public class ActivityA extends AppCompatActivity {
     /**
      * 启动ActivityB，并传递数据
      */
-    public void sendClick(View view) {
+    public void sendClick1(View view) {
         Intent intent = new Intent(this, ActivityB.class);
         String info = et_info.getText().toString();
         // 封装要传递的数据
-//        Bundle data = new Bundle();
-//        data.putString("info", info);
-//        intent.putExtra("data", data);
+        Bundle data = new Bundle();
+        data.putString("info", info);
+        intent.putExtra("data", data);
+        startActivity(intent);
+    }
+
+    public void sendClick2(View view) {
+        Intent intent = new Intent(this, ActivityB.class);
+        String info = et_info.getText().toString();
         // 不封装直接传递
         intent.putExtra("info", info);
         intent.putExtra("age", 20);
+        startActivity(intent);
+    }
+
+    public void sendObjClick1(View view) {
+        Cat cat = new Cat();
+        cat.name = "皮卡丘";
+        cat.age = 2;
+        cat.type = "英短";
+        // 实现Serializable接口
+        Intent intent = new Intent(this, ActivityB.class);
+        intent.putExtra("cat", cat);
+        startActivity(intent);
+    }
+
+    public void sendObjClick2(View view) {
+        Dog dog = new Dog();
+        dog.name = "旺旺";
+        dog.age = 1;
+        dog.type = "萨摩耶";
+        // 实现Parcelable接口，性能更好
+        Intent intent = new Intent(this, ActivityB.class);
+        intent.putExtra("dog", dog);
         startActivity(intent);
     }
 }
