@@ -1,10 +1,14 @@
 package com.example.wuruixuan.androidstudy.activity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ListView;
 
 import com.example.wuruixuan.androidstudy.R;
 import com.example.wuruixuan.androidstudy.activity.classes.Cat;
@@ -17,6 +21,9 @@ import com.example.wuruixuan.androidstudy.activity.classes.Dog;
 public class ActivityA extends AppCompatActivity {
 
     private EditText et_info;
+    private EditText et_number;
+
+    final int REQUEST_CODE_1 = 0x1;
 
     /**
      * Activity创建时第一个调用的方法，通常我们在该方法中加载布局文件，初始化UI组件，事件注册等等
@@ -29,6 +36,8 @@ public class ActivityA extends AppCompatActivity {
         System.out.println("Activity-onCreate");
 
         et_info = findViewById(R.id.editText_info);
+        et_number = findViewById(R.id.editText_number);
+
     }
 
     /**
@@ -132,5 +141,33 @@ public class ActivityA extends AppCompatActivity {
         Intent intent = new Intent(this, ActivityB.class);
         intent.putExtra("dog", dog);
         startActivity(intent);
+    }
+
+    // 选择一个电话号码
+    public void selectClick(View view) {
+        Intent intent = new Intent(this, ActivityB.class);
+        // intent, 请求编码
+        startActivityForResult(intent, REQUEST_CODE_1);
+    }
+
+    // 重写该方法来处理返回结果
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_CODE_1 && resultCode == RESULT_OK) {
+            String number = data.getStringExtra("number");
+            et_number.setText(number);
+        }
+    }
+
+    // 拨打电话
+    public void callClick(View view) {
+        String number = et_number.getText().toString();
+        if (!number.isEmpty()) {
+            Intent intent = new Intent();
+            intent.setAction(intent.ACTION_CALL);
+            intent.setData(Uri.parse("tel:" + number));
+            startActivity(intent);
+        }
     }
 }

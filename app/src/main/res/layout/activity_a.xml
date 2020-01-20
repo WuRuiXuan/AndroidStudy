@@ -45,4 +45,29 @@
         android:text="传递对象二"
         android:onClick="sendObjClick2"/>
 
+    <EditText
+        android:id="@+id/editText_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="电话号码"
+        android:enabled="false"
+        android:layout_marginTop="100dp"
+        android:layout_below="@+id/button_sendObj2"/>
+
+    <Button
+        android:id="@+id/button_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select"
+        android:layout_below="@id/editText_number"
+        android:onClick="selectClick"/>
+
+    <Button
+        android:id="@+id/button_call"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Call"
+        android:layout_below="@id/button_select"
+        android:onClick="callClick"/>
+
 </RelativeLayout>
