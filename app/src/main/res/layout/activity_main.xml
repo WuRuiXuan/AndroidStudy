@@ -394,6 +394,33 @@
                 android:textAllCaps="false"
                 android:textSize="18sp"/>
 
+            <Button
+                android:id="@+id/btn_screen_orientation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="ScreenOrientation"
+                android:textAllCaps="false"
+                android:textSize="18sp"/>
+
+            <Button
+                android:id="@+id/btn_screen_change"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="ScreenChange"
+                android:textAllCaps="false"
+                android:textSize="18sp"/>
+
+            <Button
+                android:id="@+id/btn_shared_preferences"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="SharedPreferences"
+                android:textAllCaps="false"
+                android:textSize="18sp"/>
+
         </GridLayout>
 
     </ScrollView>

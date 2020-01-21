@@ -134,6 +134,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 switchActivity(CustomViewActivity.class);
             case R.id.btn_activity:
                 switchActivity(ActivityA.class);
+            case R.id.btn_screen_orientation:
+                switchActivity(ScreenOrientationActivity.class);
+            case R.id.btn_screen_change:
+                switchActivity(ScreenChangeActivity.class);
+            case R.id.btn_shared_preferences:
+                switchActivity(SharedPreferencesActivity.class);
                 break;
         }
     }
@@ -181,6 +187,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button btn_style_and_theme = findViewById(R.id.btn_style_and_theme);
         Button btn_custom_view = findViewById(R.id.btn_custom_view);
         Button btn_activity = findViewById(R.id.btn_activity);
+        Button btn_screen_orientation = findViewById(R.id.btn_screen_orientation);
+        Button btn_screen_change = findViewById(R.id.btn_screen_change);
+        Button btn_shared_preferences = findViewById(R.id.btn_shared_preferences);
 
         btn_linearLayout.setOnClickListener(this);
         btn_relativeLayout.setOnClickListener(this);
@@ -224,6 +233,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_style_and_theme.setOnClickListener(this);
         btn_custom_view.setOnClickListener(this);
         btn_activity.setOnClickListener(this);
+        btn_screen_orientation.setOnClickListener(this);
+        btn_screen_change.setOnClickListener(this);
+        btn_shared_preferences.setOnClickListener(this);
     }
 
     private void switchActivity(Class activityClass) {

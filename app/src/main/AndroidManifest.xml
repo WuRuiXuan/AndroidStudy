@@ -13,6 +13,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".activity.SharedPreferencesActivity"></activity>
+        <activity android:name=".activity.ScreenChangeActivity" /> <!-- 拦截横竖屏切换 android:configChanges="keyboard|screenSize|orientation" -->
+        <activity
+            android:name=".activity.ScreenOrientationActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen" /> <!-- 窗体模式 android:theme="@android:style/Theme.DeviceDefault.Dialog" -->
         <activity android:name=".activity.ActivityB" />
         <activity android:name=".activity.ActivityA" />
         <activity android:name=".activity.CustomViewActivity" />
