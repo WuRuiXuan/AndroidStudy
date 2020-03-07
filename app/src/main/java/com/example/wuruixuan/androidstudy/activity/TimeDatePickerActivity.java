@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import com.example.wuruixuan.androidstudy.R;
 
-public class TimePickerAndDatePickerActivity extends AppCompatActivity {
+public class TimeDatePickerActivity extends AppCompatActivity {
 
     private TimePicker tp;
     private DatePicker dp;
@@ -17,7 +17,7 @@ public class TimePickerAndDatePickerActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ui_time_and_date_picker);
+        setContentView(R.layout.activity_time_date_picker);
         tp = findViewById(R.id.timePicker);
         dp = findViewById(R.id.datePicker);
     }

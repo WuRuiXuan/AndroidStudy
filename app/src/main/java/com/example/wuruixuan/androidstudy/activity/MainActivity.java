@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 switchActivity(DatePickerActivity.class);
                 break;
             case R.id.btn_timeAndDatePicker:
-                switchActivity(TimePickerAndDatePickerActivity.class);
+                switchActivity(TimeDatePickerActivity.class);
                 break;
             case R.id.btn_gridView:
                 switchActivity(GridViewActivity.class);
@@ -112,32 +112,46 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_textSwitcher:
                 switchActivity(TextSwitcherActivity.class);
+                break;
             case R.id.btn_viewFlipper:
                 switchActivity(ViewFlipperActivity.class);
+                break;
             case R.id.btn_optionsMenu:
                 switchActivity(OptionsMenuActivity.class);
+                break;
             case R.id.btn_contextMenu:
                 switchActivity(ContextMenuActivity.class);
+                break;
             case R.id.btn_popupMenu:
                 switchActivity(PopupMenuActivity.class);
+                break;
             case R.id.btn_viewPager:
                 switchActivity(ViewPagerActivity.class);
+                break;
             case R.id.btn_viewPager2:
                 switchActivity(ViewPagerActivity2.class);
+                break;
             case R.id.btn_popupWindow:
                 switchActivity(PopupWindowActivity.class);
+                break;
             case R.id.btn_notifications:
                 switchActivity(NotificationsActivity.class);
+                break;
             case R.id.btn_style_and_theme:
                 switchActivity(StyleAndThemeActivity.class);
+                break;
             case R.id.btn_custom_view:
                 switchActivity(CustomViewActivity.class);
+                break;
             case R.id.btn_activity:
                 switchActivity(ActivityA.class);
+                break;
             case R.id.btn_screen_orientation:
                 switchActivity(ScreenOrientationActivity.class);
+                break;
             case R.id.btn_screen_change:
                 switchActivity(ScreenChangeActivity.class);
+                break;
             case R.id.btn_shared_preferences:
                 switchActivity(SharedPreferencesActivity.class);
                 break;

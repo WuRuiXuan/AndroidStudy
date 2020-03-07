@@ -44,11 +44,11 @@ public class TextSwitcherActivity extends AppCompatActivity implements ViewSwitc
         }
         else if (action == MotionEvent.ACTION_UP) {
             endX = event.getX();
-            if (startX - endX > 20) { // 下一张
+            if (startX - endX > 20) { // 下一条
                 index = index + 1 < texts.length ? ++index : 0;
                 ts.setInAnimation(this, android.R.anim.fade_in);
                 ts.setOutAnimation(this, android.R.anim.fade_out);
-            } else if (endX - startX > 20) { // 上一张
+            } else if (endX - startX > 20) { // 上一条
                 index = index - 1 < 0 ? texts.length - 1 : --index;
                 ts.setInAnimation(this, android.R.anim.fade_in);
                 ts.setOutAnimation(this, android.R.anim.fade_out);

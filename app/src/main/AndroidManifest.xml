@@ -52,7 +52,7 @@
         <activity android:name=".activity.ListViewActivity" />
         <activity android:name=".activity.GridViewActivity2" />
         <activity android:name=".activity.GridViewActivity" />
-        <activity android:name=".activity.TimePickerAndDatePickerActivity" />
+        <activity android:name=".activity.TimeDatePickerActivity" />
         <activity android:name=".activity.DatePickerActivity" />
         <activity android:name=".activity.TimePickerActivity" />
         <activity android:name=".activity.AlertDialogActivity" />
